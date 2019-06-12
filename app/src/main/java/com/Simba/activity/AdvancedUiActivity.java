@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.Simba.ui.DrawingTest;
+import com.Simba.ui.EraserView;
 import com.Simba.ui.FilterView;
 import com.Simba.ui.FilterView2;
+import com.Simba.ui.GuaGuaCardView;
 import com.Simba.ui.MyGradient;
 import com.Simba.ui.RadarGradientView;
 import com.Simba.ui.ZoomImageView;
@@ -33,6 +36,12 @@ public class AdvancedUiActivity extends AppCompatActivity {
             setContentView(new FilterView(this));
         } else if ("滤镜2".equals(to)) {
             setContentView(new FilterView2(this));
+        } else if ("刮刮卡".equals(to)) {
+            setContentView(new GuaGuaCardView(this));
+        } else if ("drawingTest".equals(to)) {
+            setContentView(new DrawingTest(this));
+        } else if ("橡皮擦".equals(to)) {
+            setContentView(new EraserView(this));
         }
 
     }

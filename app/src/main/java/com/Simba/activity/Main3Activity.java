@@ -3,7 +3,6 @@ package com.Simba.activity;
 
 import android.app.Activity;
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -17,7 +16,6 @@ import com.Simba.adapter.AdvancedUIAdapter;
 import com.Simba.entity.AdvanceduiEntity;
 import com.example.think.myapp.R;
 import com.user.baselibrary.service.ServiceFactory;
-import com.user.module2.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +38,7 @@ public class Main3Activity extends Activity implements AdvancedUIAdapter.ItemCli
     }
 
     private void initData() {
-        String [] str={"跳转到流式","线性渲染","雷达","水波纹","填满心","滤镜","滤镜2"};
+        String [] str={"跳转到流式","线性渲染","雷达","水波纹","填满心","滤镜","滤镜2","刮刮卡","drawingTest","橡皮擦"};
         //要跳转到的自定义view
         list=new ArrayList<>();
         for (int i=0;i<str.length;i++) {
