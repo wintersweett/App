@@ -1,8 +1,8 @@
 package com.example.think.myapp;
 
-import org.junit.Test;
+import android.util.Log;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void sortTest() {
+        Log.i("zhm","1111");
     }
 }

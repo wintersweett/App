@@ -11,13 +11,16 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
+import com.Simba.Utils.Arithmatic;
 import com.Simba.Utils.UtilsLog;
 import com.Simba.adapter.AdvancedUIAdapter;
 import com.Simba.entity.AdvanceduiEntity;
+import com.Simba.entity.Mahjong;
 import com.example.think.myapp.R;
 import com.user.baselibrary.service.ServiceFactory;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main3Activity extends Activity implements AdvancedUIAdapter.ItemClick{
@@ -27,18 +30,32 @@ public class Main3Activity extends Activity implements AdvancedUIAdapter.ItemCli
     List<AdvanceduiEntity> list;
     AdvancedUIAdapter uiAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         initView();
+        //测试用
+        int []a=new int[]{2,1,5,3,4};
+        UtilsLog.i("zhm","suanfa");
+        LinkedList<Mahjong> list=new LinkedList<>();
+        list.add(new Mahjong(3,1));
+        list.add(new Mahjong(2,5));
+        list.add(new Mahjong(3,9));
+        UtilsLog.i("zhm",list.toString());
+
+
+        Arithmatic.selectSort(a);
         initData();
         reisterListener();
+
+
 
     }
 
     private void initData() {
-        String [] str={"跳转到流式","线性渲染","雷达","水波纹","填满心","滤镜","滤镜2","刮刮卡","drawingTest","橡皮擦"};
+        String [] str={"跳转到流式","线性渲染","雷达","水波纹","填满心","滤镜","滤镜2","刮刮卡","drawingTest","橡皮擦","Mutiply","倒影","2","lighten","圆角"};
         //要跳转到的自定义view
         list=new ArrayList<>();
         for (int i=0;i<str.length;i++) {
