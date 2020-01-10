@@ -1,8 +1,8 @@
 package com.Simba.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.Simba.ui.DrawingTest;
 import com.Simba.ui.EraserView;
@@ -57,6 +57,9 @@ public class AdvancedUiActivity extends AppCompatActivity {
             setContentView(new LightBookView(this));
         }else if ("圆角".equals(to)) {
             setContentView(new RoundImageView(this));
+        } else if ("启发式寻路算法".equals(to)) {
+            Intent intent=new Intent(this,MapSuanfaActivity.class);
+            startActivity(intent);
         }
 
 

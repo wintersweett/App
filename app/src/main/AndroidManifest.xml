@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.Simba.activity.MyBitmap"></activity>
+        <activity android:name="com.Simba.activity.MapSuanfaActivity"></activity>
+        <activity android:name="com.Simba.activity.MyBitmap" />
         <activity android:name="com.Simba.activity.AdvancedUiActivity" />
         <activity android:name="com.Simba.activity.WaterFlowActivity" />
         <activity android:name="com.Simba.activity.Main3Activity">

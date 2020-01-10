@@ -2,7 +2,7 @@ package com.Simba.Utils;
 
 import android.util.Log;
 
-public class UtilsLog {
+public  class  UtilsLog {
     //true正式，true测试
     public static boolean isTest=true;//true打log；false不打log
     public boolean isCeshi = true;

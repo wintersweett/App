@@ -81,16 +81,37 @@ public class ArithmaticTest {
         System.out.print(search.searchNode(5).data);
         System.out.println();
 
-//        TreeNode delNode=search.searchNode(5);
-//        search.delNode(delNode);
-//        search.midOrderTravers(search.root);
-        for (int i:array) {
-            TreeNode dNode=search.searchNode(array[i]);
-            search.searchNode(dNode.data);
-            search.delNode(dNode);
-            search.midOrderTravers(search.root);
-        }
+        TreeNode delNode=search.searchNode(5);
+        search.delNode(delNode);
+        search.midOrderTravers(search.root);
 
 
+
+    }
+    @Test
+    public void printMap() {
+         int[][] map = {
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+                {0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1},
+                {0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1},
+                {1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1},
+                {1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+                {0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0},
+                {1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1},
+                {0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0},
+                {0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1},
+                {0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1},
+                {1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1},
+                {1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1},
+                {0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0},
+                {1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1},
+                {1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1},
+                {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1}
+        };
+        MapUtils.printMap(map);
     }
 }
