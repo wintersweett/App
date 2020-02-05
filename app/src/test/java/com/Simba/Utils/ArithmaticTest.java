@@ -5,6 +5,7 @@ import com.Simba.entity.Mahjong;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class ArithmaticTest {
@@ -114,4 +115,74 @@ public class ArithmaticTest {
         };
         MapUtils.printMap(map);
     }
+    @Test
+
+    public void haffman() {
+        ArrayList<HaffmanTree.TreeNode> list=new ArrayList<>();
+        HaffmanTree.TreeNode<String> node=new HaffmanTree.TreeNode<>("good",50);
+        list.add(node);
+        list.add(new HaffmanTree.TreeNode("morning",10));
+        list.add(new HaffmanTree.TreeNode("afternoon",20));
+        list.add(new HaffmanTree.TreeNode("dinner",110));
+        list.add(new HaffmanTree.TreeNode("night",200));
+        HaffmanTree haffmanTree=new HaffmanTree();
+        haffmanTree.createHaffmanTree(list);
+        haffmanTree.showHaffman(haffmanTree.root);
+
+        haffmanTree.getCode(node);
+    }
+
+    @Test
+    public void avlTree() {
+        Integer[] nums={5,8,2,0,1,-2};
+        AVLBTree<Integer> avlbTree=new AVLBTree<>();
+        for (int i = 0; i < nums.length; i++) {
+            avlbTree.insertElement(nums[i]);
+        }
+        avlbTree.showAVL(avlbTree.root);
+    }
+    @Test
+    public void testGraph() {
+        Graph graph=new Graph(5);
+        graph.creatSimpleMatrix();
+        graph.dfs();
+    }
+
+    @Test
+    public void feibonaqishu() {
+        LCSandKMP lcs=new LCSandKMP();
+        System.out.println(lcs.f(2));
+
+    }
+    @Test
+    public void testKMP() {
+        String str="ababcabcbababcabacaba";
+        String dest="ababcaba";
+        int[]array=LCSandKMP.kmpNext(dest);
+        System.out.println(LCSandKMP.kmp(str,dest,array));
+    }
+    @Test
+    public void testSquareUp() {
+        SquareUp squareUp=new SquareUp();
+        squareUp.test();
+    }
+    @Test
+    public void testEightQueens() {
+        eightQueens.eightQueens(0);
+    }
+@Test
+    public void testAov() {
+//        AOVandTopologicalSorting aov=new AOVandTopologicalSorting();
+//        aov.creatSheet();
+//    int a=1;
+//    System.out.println(++a);
+//    System.out.println(a);
+//
+//    int b=2;
+//    System.out.println(b++);
+//    System.out.println(b);
+
+    AOEsort aoEsort=new AOEsort();
+    aoEsort.creatAOE();
+}
 }

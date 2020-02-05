@@ -1,6 +1,12 @@
 package com.Simba.Utils;
 
+/*
+
+ 其中的删除，可借鉴TreeMap源码中move操作，会更高效
+ */
+
 public class BinaryTree {
+
     //节点
     class Node<T> {
         T data;
